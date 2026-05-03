@@ -68,4 +68,12 @@ PlayerPreview.SkinSource = new BitmapImage(new Uri("[https://minotar.net/skin/St
 
 Если вы нашли баг или у вас есть идеи по улучшению — открывайте Issue или Pull Request!
 
+## 📸 Примеры работы
+
+![Демонстрация SkinView](TestSolution/Gif1.gif)
+
+![Пример 1 — Steve](TestSolution/image.png)
+
+![Пример 2 — Slim + Overlays](TestSolution/image2.png)
+
 *Разработано в рамках проекта Runia.*
