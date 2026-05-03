@@ -13,9 +13,6 @@
                 <Button Content="Открыть файл" Click="LoadFromFile_Click" Height="30" Margin="5,0,0,0"/>
             </UniformGrid>
         </StackPanel>
-
-
-        <!-- Наш кастомный рендерер -->
         <local:SkinView x:Name="PlayerPreview" Margin="0,100,0,0"/>
     </Grid>
 </Window>

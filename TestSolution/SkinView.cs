@@ -46,11 +46,9 @@ public class SkinView : Control
         _viewport.Children.Add(modelVisual);
         this.AddVisualChild(_viewport);
 
-        // Таймер для автовращения (60 FPS)
         _autoRotateTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(16) };
         _autoRotateTimer.Tick += (s, e) => {
             if (IsMouseCaptured) return;
-            // Если мышь не трогали 4 секунды — начинаем крутить
             if ((DateTime.Now - _lastMoveTime).TotalSeconds > 4)
             {
                 _currentAngleY += 0.4;
@@ -66,7 +64,6 @@ public class SkinView : Control
             {
                 var pos = e.GetPosition(this);
                 _currentAngleY += pos.X - lastPos.X;
-                // Ограничиваем наклон головы (от -70 до 70 градусов)
                 _currentAngleX = Math.Clamp(_currentAngleX + (pos.Y - lastPos.Y), -70, 70);
 
                 UpdateRotation();
